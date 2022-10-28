@@ -80,7 +80,8 @@ function deleteRecipe(){
 //update any existing recipe using this function
 function editRecipe(){
     var editBtnID = $(this)
+    var parentDiv = editBtnID.closest(".recipeDiv")
     id = editBtnID.attr("recipeID")
 
-    console.log("")
-}
+    console.log(`Editing Recipe of ID = ${id}`)
+} 
