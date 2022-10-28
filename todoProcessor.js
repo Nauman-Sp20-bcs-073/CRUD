@@ -84,10 +84,12 @@ function addRecipe(){
     $.ajax({
         url:"https://usman-cui-recipies.herokuapp.com/api/recipes",
         method:"POST",
+        //title and body are names of actual API's attributes/props.
         data: {title: recipeName, body: recipeDescription},
         error: function(res){console.log("Failed to Add Recipe!" + res)},
 
         success: function (res) {
+            console.log("Recipe Entry Successfull")
             loadRecipes()
         }
 
